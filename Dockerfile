@@ -1,9 +1,22 @@
+FROM golang:1.21-alpine AS builder
 
-FROM node:18-alpine
 WORKDIR /app
-COPY package*.json ./
-RUN npm ci
+
+COPY go.mod go.sum* ./
+RUN go mod download
+
 COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["npm", "start"]
+
+RUN CGO_ENABLED=0 GOOS=linux go build -o idp-server cmd/idp-server/main.go
+
+FROM alpine:latest
+
+RUN apk --no-cache add ca-certificates
+
+WORKDIR /root/
+
+COPY --from=builder /app/idp-server .
+
+EXPOSE 8080
+
+CMD ["./idp-server"]
