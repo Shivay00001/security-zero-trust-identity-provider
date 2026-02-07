@@ -1,26 +1,23 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
 
-# Private/Secret files
-.env
-.env.*
-*.secret
-*.key
-credentials.json
-google-services.json
-service-account.json
-secrets.py
-api_keys.py
-config_private.py
+# Test binary, built with `go test -c`
+*.test
 
-# Build/OS
-__pycache__/
-*.pyc
-node_modules/
-.DS_Store
-*.log
-venv/
-.venv/
-dist/
-build/
-*.spec
-*.db
-*.sqlite3
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Docker
+docker-compose.override.yml
