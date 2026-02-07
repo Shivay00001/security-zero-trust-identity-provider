@@ -1,0 +1,29 @@
+{
+    "name": "security-zero-trust-identity-provider",
+    "version": "1.0.0",
+    "description": "OIDC Identity Provider with Zero Trust Policy Engine",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "dev": "ts-node-dev src/index.ts",
+        "lint": "eslint src/**/*.ts"
+    },
+    "dependencies": {
+        "oidc-provider": "^8.4.0",
+        "express": "^4.18.2",
+        "ejs": "^3.1.9",
+        "helmet": "^7.1.0",
+        "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "@types/express": "^4.17.21",
+        "@types/oidc-provider": "^8.4.0",
+        "typescript": "^5.3.2",
+        "ts-node-dev": "^2.0.0",
+        "@typescript-eslint/eslint-plugin": "^6.13.0",
+        "@typescript-eslint/parser": "^6.13.0",
+        "eslint": "^8.54.0"
+    }
+}
