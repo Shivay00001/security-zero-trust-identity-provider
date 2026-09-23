@@ -50,3 +50,12 @@ go run cmd/idp-server/main.go
 ## 📄 License
 
 MIT License
+
+## ▶️ Run
+
+```bash
+go build -o idp-server ./cmd/idp-server
+PORT=8080 ./idp-server   # GET /health | POST /auth/token | /.well-known/openid-configuration
+```
+
+Docker: `docker build -t zero-trust-idp . && docker run -p 8080:8080 zero-trust-idp`
