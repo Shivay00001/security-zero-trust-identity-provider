@@ -1,5 +1,7 @@
 # Zero Trust Identity Provider
 
+Built by [VisionQuantech](https://visionquantech.com) — AI agents, apps & tools for small businesses.
+
 [![Go Version](https://img.shields.io/badge/Go-1.21+-00ADD8.svg)](https://go.dev/)
 [![OAuth2](https://img.shields.io/badge/OAuth2-2.0-blue.svg)](https://oauth.net/2/)
 [![OIDC](https://img.shields.io/badge/OIDC-1.0-orange.svg)](https://openid.net/connect/)
